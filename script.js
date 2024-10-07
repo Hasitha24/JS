@@ -20,3 +20,27 @@ document.getElementById("one").innerHTML = "The full name is "+ person.fullname(
 person.id =12;
 document.getElementById("one").innerHTML = "The ID of the member is "+ person.id;
 //output: The ID of the member is 12
+
+//Deleting a property
+delete person.address
+//delete person ["address"];
+document.getElementById("one").innerHTML = "The address of the member is "+ person.address;
+//output: The address of the member is undefined
+
+//Nested Objects
+//Declaration of nested objects
+car = {
+    brand: "Toyota",
+    year: 2022,
+    models : {
+        model1 : "Corolla",
+        model2 : "Prius",
+        model3 : "Yaris"
+    }
+}
+
+//Accessing nested objects
+//document.getElementById("one").innerHTML = "Her favourite car model is " + car.models.model2;
+//Output: Her favourite car model is Prius
+document.getElementById("one").innerHTML = "Her favourite car model is " + car.models["model1"];
+//Her favourite car model is Corolla
