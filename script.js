@@ -15,3 +15,8 @@ person.address = "Bandaragama";
 document.getElementById("one").innerHTML = "The new member of the team is "+ person["name"] +". She is "+ person.age +" years old." ;
 person.fullname = function() {return this.name + " "+ this.lastname};
 document.getElementById("one").innerHTML = "The full name is "+ person.fullname();
+
+//Adding new property
+person.id =12;
+document.getElementById("one").innerHTML = "The ID of the member is "+ person.id;
+//output: The ID of the member is 12
