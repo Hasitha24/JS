@@ -49,6 +49,7 @@
 const newCar = {
 color: "blue",
 brand: "Toyota",
+year: "2022",
 model: {
     model2 : "Prius",
     model3 : "Yaris"
@@ -57,4 +58,13 @@ myCar: function() {
     return this.brand + " " + this.model.model2;
 }
 }
-document.getElementById("one").innerHTML = "My car is "+ newCar.myCar();
+
+
+//document.getElementById("one").innerHTML = "My car is "+ newCar.myCar();
+
+//Adding a method to an object
+newCar.spec = function(){
+    return this.myCar() + " " + this.year+ " "+ this.color;
+};
+
+document.getElementById("one").innerHTML = "My brand new car is " + newCar.spec();
