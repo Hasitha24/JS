@@ -46,10 +46,10 @@
 //Her favourite car model is Corolla
 
 //JS Object Methods
-const newCar = {
-color: "blue",
-brand: "Toyota",
-year: "2022",
+// const newCar = {
+// color: "blue",
+// brand: "Toyota",
+// year: "2022",
 // model: {
 //     model2 : "Prius",
 //     model3 : "Yaris"
@@ -57,7 +57,7 @@ year: "2022",
 // myCar: function() {
 //     return this.brand + " " + this.model.model2;
 // }
-}
+// }
 
 
 //document.getElementById("one").innerHTML = "My car is "+ newCar.myCar();
@@ -109,7 +109,29 @@ year: "2022",
 
 //Using JSON.stringify()
 //JavaScript objects can be converted to a string with JSON method JSON.stringify().
-let myString = JSON.stringify(newCar);
+// let myString = JSON.stringify(newCar);
 
-document.getElementById("one").innerHTML =myString;
+// document.getElementById("one").innerHTML =myString;
 //output: {"color":"blue","brand":"Toyota","year":"2022"}
+
+//<---------Object Constructor Functions----------->
+// Object constructor functions in JavaScript are used to create multiple objects with the same structure (properties and methods). 
+//You can think of them like templates or blueprints for creating similar objects, where each object will have its own values for properties
+// but share the same structure and behavior.
+
+//Let's say the car manufacturing plant is using this blurprint to make all the cars.The cars may have different features, but they follow
+//the same blueprint as mentioned follows
+function Car(make,model,year,color){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color =color;
+}
+
+//The above mentioned blurprint can be used to create many car types
+const carModel1 = new Car("Toyota","Corolla",2020,"Red");
+const carModel2 = new Car("Ford","Mustang",2021,"Blue");
+const carModel3 = new Car("Tesla","Model S",2022,"White");
+
+document.getElementById("one").innerHTML = carModel1.year;
+//output: 2020
