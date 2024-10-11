@@ -128,10 +128,33 @@ function Car(make,model,year,color){
     this.color =color;
 }
 
+
 //The above mentioned blurprint can be used to create many car types
+// const carModel1 = new Car("Toyota","Corolla",2020,"Red",true);
+// const carModel2 = new Car("Ford","Mustang",2021,"Blue",false);
+// const carModel3 = new Car("Tesla","Model S",2022,"White",true);
+
+//document.getElementById("one").innerHTML = carModel1.year;
+//output: 2020
+
+
 const carModel1 = new Car("Toyota","Corolla",2020,"Red");
 const carModel2 = new Car("Ford","Mustang",2021,"Blue");
 const carModel3 = new Car("Tesla","Model S",2022,"White");
 
-document.getElementById("one").innerHTML = carModel1.year;
-//output: 2020
+//Adding a Property to an Object
+// carModel2.country = "Japan";
+// document.getElementById("one").innerHTML = carModel2.country;
+//output:Japan
+
+//Adding a Property to a Constructor
+//We can NOT add a new property to an object constructor
+
+/* Prototypes are useful when you want to add properties
+ or methods to all instances of an object without having to define them inside the constructor itself. This is memory-efficient
+ because all instances share the same property or method via the prototype rather than each object having its own copy.
+
+Here, the AutonomousMode property is shared across all car objects, so all 3 models would have the AutonomousMode set to "YES".
+*/
+Car.prototype.AutonomousMode = "YES";
+document.getElementById("one").innerHTML = carModel3.AutonomousMode;
