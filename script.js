@@ -50,21 +50,45 @@ const newCar = {
 color: "blue",
 brand: "Toyota",
 year: "2022",
-model: {
-    model2 : "Prius",
-    model3 : "Yaris"
-},
-myCar: function() {
-    return this.brand + " " + this.model.model2;
-}
+// model: {
+//     model2 : "Prius",
+//     model3 : "Yaris"
+// },
+// myCar: function() {
+//     return this.brand + " " + this.model.model2;
+// }
 }
 
 
 //document.getElementById("one").innerHTML = "My car is "+ newCar.myCar();
 
 //Adding a method to an object
-newCar.spec = function(){
-    return this.myCar() + " " + this.year+ " "+ this.color;
-};
+// newCar.spec = function(){
+//     return this.myCar() + " " + this.year+ " "+ this.color;
+// };
 
-document.getElementById("one").innerHTML = "My brand new car is " + newCar.spec();
+//document.getElementById("one").innerHTML = "My brand new car is " + newCar.spec();
+
+//JS Display objects
+//Displaying a JavaScript object will output [object Object]
+//document.getElementById("one").innerHTML = newCar;
+//output:[object Object]
+
+//Displaying Object Properties
+//document.getElementById("one").innerHTML = newCar.color;
+//output:blue
+
+//Displaying Properties in a Loop
+let displayText = " ";
+for (let i in newCar)
+{
+      displayText += newCar[i] + " ";
+        
+}
+document.getElementById("one").innerHTML = displayText;
+//output:blue Toyota 2022
+
+//Can display by using an array
+// const myArray =Object.values(newCar);
+
+// document.getElementById("one").innerHTML = myArray
