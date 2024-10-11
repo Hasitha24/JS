@@ -89,7 +89,21 @@ year: "2022",
 //output:blue Toyota 2022
 
 //Can display by using an array
-const myArray =Object.values(newCar);
+// const myArray =Object.values(newCar);
 
-document.getElementById("one").innerHTML = myArray
+// document.getElementById("one").innerHTML = myArray
 //output: blue Toyota 2022
+
+
+//Using Object.entries() 
+let displayText = "";
+for (let [car,value] of Object.entries(newCar)){
+
+    displayText += car + ":" + value + "<br>";
+}
+
+document.getElementById("one").innerHTML = displayText;
+//output: color:blue
+//        brand:Toyota
+//        year:2022
+
