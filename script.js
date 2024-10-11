@@ -79,16 +79,17 @@ year: "2022",
 //output:blue
 
 //Displaying Properties in a Loop
-let displayText = " ";
-for (let i in newCar)
-{
-      displayText += newCar[i] + " ";
+// let displayText = " ";
+// for (let i in newCar)
+// {
+//       displayText += newCar[i] + " ";
         
-}
-document.getElementById("one").innerHTML = displayText;
+// }
+// document.getElementById("one").innerHTML = displayText;
 //output:blue Toyota 2022
 
 //Can display by using an array
-// const myArray =Object.values(newCar);
+const myArray =Object.values(newCar);
 
-// document.getElementById("one").innerHTML = myArray
+document.getElementById("one").innerHTML = myArray
+//output: blue Toyota 2022
