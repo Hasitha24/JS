@@ -96,14 +96,20 @@ year: "2022",
 
 
 //Using Object.entries() 
-let displayText = "";
-for (let [car,value] of Object.entries(newCar)){
+// let displayText = "";
+// for (let [car,value] of Object.entries(newCar)){
 
-    displayText += car + ":" + value + "<br>";
-}
+//     displayText += car + ":" + value + "<br>";
+// }
 
-document.getElementById("one").innerHTML = displayText;
+// document.getElementById("one").innerHTML = displayText;
 //output: color:blue
 //        brand:Toyota
 //        year:2022
 
+//Using JSON.stringify()
+//JavaScript objects can be converted to a string with JSON method JSON.stringify().
+let myString = JSON.stringify(newCar);
+
+document.getElementById("one").innerHTML =myString;
+//output: {"color":"blue","brand":"Toyota","year":"2022"}
