@@ -162,3 +162,9 @@ document.getElementById("one").innerHTML = carModel3.AutonomousMode;
 //<-----------JS Events------------------>
 // In index.html page we add  <button onclick ="document.getElementById('one').innerHTML= Date()">What is the time?  </button>
 //output:Mon Oct 14 2024 23:27:36 GMT+0530 (India Standard Time)
+
+
+//using JS function
+function displayDate(){
+    document.getElementById("one").innerHTML = Date();
+}
