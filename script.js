@@ -158,3 +158,7 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 */
 Car.prototype.AutonomousMode = "YES";
 document.getElementById("one").innerHTML = carModel3.AutonomousMode;
+
+//<-----------JS Events------------------>
+// In index.html page we add  <button onclick ="document.getElementById('one').innerHTML= Date()">What is the time?  </button>
+//output:Mon Oct 14 2024 23:27:36 GMT+0530 (India Standard Time)
