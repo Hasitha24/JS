@@ -121,12 +121,12 @@
 
 //Let's say the car manufacturing plant is using this blurprint to make all the cars.The cars may have different features, but they follow
 //the same blueprint as mentioned follows
-function Car(make,model,year,color){
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.color =color;
-}
+// function Car(make,model,year,color){
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//     this.color =color;
+// }
 
 
 //The above mentioned blurprint can be used to create many car types
@@ -138,9 +138,9 @@ function Car(make,model,year,color){
 //output: 2020
 
 
-const carModel1 = new Car("Toyota","Corolla",2020,"Red");
-const carModel2 = new Car("Ford","Mustang",2021,"Blue");
-const carModel3 = new Car("Tesla","Model S",2022,"White");
+// const carModel1 = new Car("Toyota","Corolla",2020,"Red");
+// const carModel2 = new Car("Ford","Mustang",2021,"Blue");
+// const carModel3 = new Car("Tesla","Model S",2022,"White");
 
 //Adding a Property to an Object
 // carModel2.country = "Japan";
@@ -156,8 +156,8 @@ const carModel3 = new Car("Tesla","Model S",2022,"White");
 
 Here, the AutonomousMode property is shared across all car objects, so all 3 models would have the AutonomousMode set to "YES".
 */
-Car.prototype.AutonomousMode = "YES";
-document.getElementById("one").innerHTML = carModel3.AutonomousMode;
+// Car.prototype.AutonomousMode = "YES";
+// document.getElementById("one").innerHTML = carModel3.AutonomousMode;
 
 //<-----------JS Events------------------>
 // In index.html page we add  <button onclick ="document.getElementById('one').innerHTML= Date()">What is the time?  </button>
@@ -165,6 +165,16 @@ document.getElementById("one").innerHTML = carModel3.AutonomousMode;
 
 
 //using JS function
-function displayDate(){
-    document.getElementById("one").innerHTML = Date();
-}
+// function displayDate(){
+//     document.getElementById("one").innerHTML = Date();
+// }
+
+//JavaScript Strings
+// let text = "Hasitha";
+// document.getElementById("one").innerHTML = text;
+//output: Hasitha
+
+let carName1 = "Prius";
+let carName2 = 'Kelisa';
+document.getElementById("one").innerHTML = carName1 + " and "+ carName2;
+//output: Prius and Kelisa
