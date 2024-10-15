@@ -186,6 +186,28 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 //output:'Prius' and "Kelisa"
 
 //Template Strings
-let sentence = `She's well known as "Hasi"`;
-document.getElementById("one").innerHTML = sentence;
+// let sentence = `She's well known as "Hasi"`;
+// document.getElementById("one").innerHTML = sentence;
 //output: She's well known as "Hasi"
+
+//String Length
+// let sentence2 = "This is true";
+// let Length = sentence2.length;
+// document.getElementById("one").innerHTML = sentence2.length;
+//output: 12 (including 2 spaces)
+
+//Escape Characters
+// let sentence3 = "Her name is \"Hasitha\", not \"Hasi\"";
+// document.getElementById("one").innerHTML = sentence3;
+//output:Her name is "Hasitha", not "Hasi"
+
+//Template Strings
+//Templates are strings enclosed in backticks (`This is a template string`).
+//Templates allow multiline strings:
+let text = `The dog
+climed the hill
+and reached home`;
+document.getElementById("one").innerHTML = text;
+// output:The dog climed the hill and reached home
+
+//JavaScript Strings as Objects
