@@ -174,7 +174,18 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 // document.getElementById("one").innerHTML = text;
 //output: Hasitha
 
-let carName1 = "Prius";
-let carName2 = 'Kelisa';
-document.getElementById("one").innerHTML = carName1 + " and "+ carName2;
+// let carName1 = "Prius";
+// let carName2 = 'Kelisa';
+// document.getElementById("one").innerHTML = carName1 + " and "+ carName2;
 //output: Prius and Kelisa
+
+//Quotes Inside Quotes
+// let carName1 = "'Prius'";
+// let carName2 = '"Kelisa"';
+// document.getElementById("one").innerHTML = carName1 + " and "+ carName2;
+//output:'Prius' and "Kelisa"
+
+//Template Strings
+let sentence = `She's well known as "Hasi"`;
+document.getElementById("one").innerHTML = sentence;
+//output: She's well known as "Hasi"
