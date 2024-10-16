@@ -227,6 +227,16 @@ let name2 = new String("Kapugamage");
 //output: false (reason: Comparing two JavaScript objects always returns false.)
 
 //Extracting String Characters
-let char = name2.charAt(2);
-document.getElementById("one").innerHTML = char;
+// let char = name2.charAt(2);
+// document.getElementById("one").innerHTML = char;
 //output: 2 (counting started from 0)
+
+//JavaScript String charCodeAt()
+// let char = name2.charCodeAt(2);
+// document.getElementById("one").innerHTML = char;
+//output: 112 (method returns the code of the character at a specified index in a string)
+
+//JavaScript String at()
+let letter = name2.at(4);
+document.getElementById("one").innerHTML = letter;
+//output: g (index starting from 0)
