@@ -237,6 +237,65 @@ let name2 = new String("Kapugamage");
 //output: 112 (method returns the code of the character at a specified index in a string)
 
 //JavaScript String at()
-let letter = name2.at(4);
-document.getElementById("one").innerHTML = letter;
+//let letter = name2.at(4);
+//document.getElementById("one").innerHTML = letter;
 //output: g (index starting from 0)
+
+//to get the 3rd letter of the name
+//let letter =name2[2];
+//document.getElementById("one").innerHTML = letter;
+//output: p
+
+//---------------------------------------
+//at() is an ES2022 feature.
+//Property Access [ ]
+// let char = name2[1];
+// document.getElementById("one").innerHTML = char;
+//output: a
+
+name2[2] = "o";
+//document.getElementById("one").innerHTML = name2;
+//output: Kapugamage
+//It makes strings look like arrays (but they are not)
+// If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+// It is read only. str[0] = "A" gives no error (but does not work!)
+
+//Extracting String Parts
+//There are 3 methods for extracting a part of a string:
+
+//slice(start, end)
+// let slicePart = name2.slice(4,8);
+// document.getElementById("one").innerHTML = slicePart;
+//output:gama
+
+// let slicePart = name2.slice(4);
+// document.getElementById("one").innerHTML = slicePart;
+//output:gamage (the method will slice out the rest of the string)
+
+// let slicePart = name2.slice(-2);
+// document.getElementById("one").innerHTML = slicePart;
+//output:ge (If a parameter is negative, the position is counted from the end of the string)
+
+
+// let slicePart = name2.slice(-5,-3);
+// document.getElementById("one").innerHTML = slicePart;
+//output:am (this slices out a portion of a string from position -5 to position -3)
+
+//substring(start, end)
+// let subPart = name2.substring(2,4);
+// document.getElementById("one").innerHTML = subPart;
+//output:pu (startting from 2n position to 4th)
+
+// let subPart = name2.substring(4);
+// document.getElementById("one").innerHTML = subPart;
+//output: gamage (if omitted the second parameter, substring() will slice out the rest of the string)
+
+let subPart = name2.substring(-4);
+document.getElementById("one").innerHTML = subPart;
+//output: Kapugamage
+//The difference in slice() and substring() is that start and end values less than 0 are treated as 0 in substring()
+
+
+//substr(start, length)
+let subStrPart = name2.substr();
+document.getElementById("one").innerHTML = subStrPart;
