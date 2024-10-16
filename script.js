@@ -204,10 +204,29 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 //Template Strings
 //Templates are strings enclosed in backticks (`This is a template string`).
 //Templates allow multiline strings:
-let text = `The dog
-climed the hill
-and reached home`;
-document.getElementById("one").innerHTML = text;
+// let text = `The dog
+// climed the hill
+// and reached home`;
+// document.getElementById("one").innerHTML = text;
 // output:The dog climed the hill and reached home
 
 //JavaScript Strings as Objects
+//JS strings can be defined as objects with the keyword new as well:
+let name1 = "Hasitha";
+let name2 = new String("Kapugamage");
+
+//document.getElementById("one").innerHTML = name1;
+//output: Hasitha
+// document.getElementById("one").innerHTML = name2;
+//output: Kapugamage
+
+//document.getElementById("one").innerHTML = (name1 == name2);
+//output: false
+
+//document.getElementById("one").innerHTML = (name1 === name2);
+//output: false (reason: Comparing two JavaScript objects always returns false.)
+
+//Extracting String Characters
+let char = name2.charAt(2);
+document.getElementById("one").innerHTML = char;
+//output: 2 (counting started from 0)
