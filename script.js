@@ -410,7 +410,35 @@ let text3 = "Hasitha is learning";
 // document.getElementById("one").innerHTML = myArray[3];
 //output: undefined
 
-let myString = "cat|dog|giraffe|hen";
-const myArray = myString.split("|");
-document.getElementById("one").innerHTML = myArray[3];
+// let myString = "cat|dog|giraffe|hen";
+// const myArray = myString.split("|");
+// document.getElementById("one").innerHTML = myArray[3];
 //output: hen
+
+//JS String Search
+//JavaScript String indexOf()
+//The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found
+// let textString ="Find where the name is";
+// document.getElementById("one").innerHTML = textString.indexOf("where");
+//output: 5
+
+// let textString ="Find where the name is where";
+// document.getElementById("one").innerHTML = textString.lastIndexOf("where");
+//output:23
+//The lastIndexOf() method returns the index of the last occurrence of a specified text in a string
+
+// let textString ="Find where the name is where";
+// document.getElementById("one").innerHTML = textString.lastIndexOf("Hasitha");
+//output: -1 (Both indexOf(), and lastIndexOf() return -1 if the text is not found)
+
+// let textString ="Find where the name is where";
+// document.getElementById("one").innerHTML = textString.indexOf("where",3);
+//output:5
+
+let textString ="Find where the name is where";
+document.getElementById("one").innerHTML = textString.indexOf("where",8);
+//output: 23 (Both methods accept a second parameter as the starting position for the search)
+//The lastIndexOf() methods searches backwards (from the end to the beginning), 
+//meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.
+
+//JavaScript String search()
