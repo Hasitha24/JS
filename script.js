@@ -436,9 +436,81 @@ let text3 = "Hasitha is learning";
 //output:5
 
 let textString ="Find where the name is where";
-document.getElementById("one").innerHTML = textString.indexOf("where",8);
+// document.getElementById("one").innerHTML = textString.indexOf("where",8);
 //output: 23 (Both methods accept a second parameter as the starting position for the search)
 //The lastIndexOf() methods searches backwards (from the end to the beginning), 
 //meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.
 
 //JavaScript String search()
+// document.getElementById("one").innerHTML = textString.search("where");
+//output: 7 (The search() method searches a string for a string (or a regular expression) and returns the position of the match)
+
+// document.getElementById("one").innerHTML = textString.search(/where/);
+//output:5
+
+//The indexOf() and search() methods are NOT equal. These are the differences:
+//The search() method cannot take a second start position argument.
+//The indexOf() method cannot take powerful search values (regular expressions).
+
+//JavaScript String match()
+//The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+// const myArr = textString.match("ere");
+// document.getElementById("one").innerHTML = myArr.length;
+//output: 1
+
+// const myArr = textString.match(/ere/);
+// document.getElementById("one").innerHTML = myArr.length;
+//output:1
+
+// const myArr = textString.match(/ere/g);
+// document.getElementById("one").innerHTML = myArr.length;
+//output: 2
+
+let text4 = "Where means where you live";
+// const myArr = text4.match(/ere/gi);
+// document.getElementById("one").innerHTML = myArr.length;
+//output:2
+//If a regular expression does not include the g modifier (global search), match() will return only the first match in the string.
+
+//JavaScript String matchAll()
+// document.getElementById("one").innerHTML = text4.matchAll("ere");
+//output:[object RegExp String Iterator]
+//This gives error because matchAll() returns an iterator, 
+//and here I was trying to display that iterator directly in the HTML, which converts it to a string showing the type of object.
+
+//solution:
+// 1. Use a regular expression as the argument. You can create a regex from the string "ere" by writing /ere/g.
+// 2. Convert the iterator into an array or extract the matches in a loop to display them properly.
+//const matches = text4.matchAll(/ere/g);
+// document.getElementById("one").innerHTML = Array.from(matches);
+//output: ere,ere
+//If you want to search case insensitive, the insensitive flag (i) must be set:
+
+//JavaScript String includes()
+// document.getElementById("one").innerHTML = text4.includes("ere");
+//output: true
+//The includes() method returns true if a string contains a specified value.
+
+// document.getElementById("one").innerHTML = text4.includes("ere",18);
+//false (Check if a string includes "ere". Start at position 18)
+
+//JavaScript String startsWith()
+// document.getElementById("one").innerHTML = text4.startsWith("Where");
+//output:true (The startsWith() method returns true if a string begins with a specified value.)
+
+// document.getElementById("one").innerHTML = text4.startsWith ("you");
+//output: false
+
+//A start position for the search can be specified:
+// document.getElementById("one").innerHTML = text4.startsWith ("you",18);
+//output: true
+
+// document.getElementById("one").innerHTML = text4.startsWith ("you",6);
+//output: false
+
+//JavaScript String endsWith()
+// document.getElementById("one").innerHTML = text4.endsWith ("you");
+//output: false
+
+document.getElementById("one").innerHTML = text4.endsWith ("you",21);
+//output: true
