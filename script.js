@@ -380,7 +380,37 @@ let text3 = "Hasitha is learning";
 // document.getElementById("one").innerHTML = text4.replaceAll("Hasitha","Newton");
 //output: Newton is learning.Newton is alive.
 
-let text4 = "Hasitha is learning.Hasitha is alive.";
-document.getElementById("one").innerHTML = text4.replace("Hasitha","Newton");
+// let text4 = "Hasitha is learning.Hasitha is alive.";
+// document.getElementById("one").innerHTML = text4.replace("Hasitha","Newton");
 //Newton is learning.Hasitha is alive.
 
+//Converting a String to an array
+//text.split(",")    // Split on commas
+//text.split(" ")    // Split on spaces
+//text.split("|")    // Split on pipe
+
+//JavaScript String split()
+// let myString = "cat,dog,giraffe,hen";
+// const myArray = myString.split(",");
+// document.getElementById("one").innerHTML = myArray[2];
+//output:giraffe
+
+// let myString = "cat,dog,giraffe,hen";
+// const myArray = myString.split(" ");
+// document.getElementById("one").innerHTML = myArray[3];
+//output: undefined
+
+// let myString = "cat dog giraffe hen";
+// const myArray = myString.split(" ");
+// document.getElementById("one").innerHTML = myArray[3];
+//output: hen
+
+// let myString = "cat dog giraffe hen";
+// const myArray = myString.split("|");
+// document.getElementById("one").innerHTML = myArray[3];
+//output: undefined
+
+let myString = "cat|dog|giraffe|hen";
+const myArray = myString.split("|");
+document.getElementById("one").innerHTML = myArray[3];
+//output: hen
