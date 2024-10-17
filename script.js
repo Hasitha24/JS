@@ -212,8 +212,8 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 
 //JavaScript Strings as Objects
 //JS strings can be defined as objects with the keyword new as well:
-let name1 = "Hasitha";
-let name2 = new String("Kapugamage");
+// let name1 = "Hasiha";
+// let name2 = new String("Kapugamage");
 
 //document.getElementById("one").innerHTML = name1;
 //output: Hasitha
@@ -253,7 +253,7 @@ let name2 = new String("Kapugamage");
 // document.getElementById("one").innerHTML = char;
 //output: a
 
-name2[2] = "o";
+// name2[2] = "o";
 //document.getElementById("one").innerHTML = name2;
 //output: Kapugamage
 //It makes strings look like arrays (but they are not)
@@ -290,12 +290,97 @@ name2[2] = "o";
 // document.getElementById("one").innerHTML = subPart;
 //output: gamage (if omitted the second parameter, substring() will slice out the rest of the string)
 
-let subPart = name2.substring(-4);
-document.getElementById("one").innerHTML = subPart;
+// let subPart = name2.substring(-4);
+// document.getElementById("one").innerHTML = subPart;
 //output: Kapugamage
 //The difference in slice() and substring() is that start and end values less than 0 are treated as 0 in substring()
 
 
+//------------------------------------
 //substr(start, length)
-let subStrPart = name2.substr();
-document.getElementById("one").innerHTML = subStrPart;
+// let subStrPart = name2.substr(1,4);
+// document.getElementById("one").innerHTML = subStrPart;
+//output: apug (The difference between slice() and substring() is that in substr() the second parameter specifies the length of the extracted part)
+
+//  let subStrPart = name2.substr(4);
+//  document.getElementById("one").innerHTML = subStrPart;
+//output:gamage ( If omitted the second parameter, substr() will slice out the rest of the string.)
+
+// let subStrPart = name2.substr(-2);
+// document.getElementById("one").innerHTML = subStrPart;
+//output: ge (If the first parameter is negative, the position counts from the end of the string.)
+
+// To Upper Case and Lower Case
+// document.getElementById("one").innerHTML = name2.toUpperCase();
+//output: KAPUGAMAGE
+
+// let name3 = "HasiTha";
+// document.getElementById("one").innerHTML = name3.toLowerCase();
+//output:hasitha
+
+//JavaScript String concat()
+// let text = "        She is      ";
+// document.getElementById("one").innerHTML = text.concat(" "+name1);
+//output:She is Hasiha
+
+//JavaScript String trim()
+//The trim() method removes whitespace from both sides of a string
+// let newText = text.trim();
+// document.getElementById("one").innerHTML = newText.length ;
+//output:6
+
+// let newText = text.trimStart();
+// document.getElementById("one").innerHTML = newText.length ;
+//output:12
+//The trimStart() method removes whitespace from start of a string
+
+// document.getElementById("one").innerHTML = text.trimEnd();
+// let newText = text.trimEnd();
+// document.getElementById("one").innerHTML = newText.length ;
+//output:14
+
+//JavaScript String Padding
+// let text = "2"
+// text = text.padStart(3,"0");
+// document.getElementById("one").innerHTML = text;
+//output 002  (It pads a string with another string (multiple times) until it reaches a given length.)
+
+// let text = "Code"
+// text = text.padStart(3,"0");
+// document.getElementById("one").innerHTML = text;
+//output:Code
+
+// let text = "4"
+// text = text.padStart(3,"e");
+// document.getElementById("one").innerHTML = text;
+//output:ee4
+
+// let number = 5;
+// let text2 =number.toString();
+// text2 = text2.padStart(4,"0");
+// document.getElementById("one").innerHTML =text2;
+//output: 0005
+
+// let number = 5;
+// let text2 =number.toString();
+// text2 = text2.padEnd(4,"0");
+// document.getElementById("one").innerHTML =text2;
+//output: 5000
+
+//String Repeat
+let text3 = "Hasitha is learning";
+// document.getElementById("one").innerHTML = text3.repeat(3);
+//output:HasithaHasithaHasitha (Create copies of a text)
+
+//Replacing String Content
+// document.getElementById("one").innerHTML = text3.replace("Hasitha","Newton");
+//output:Newton is learning
+
+// let text4 = "Hasitha is learning.Hasitha is alive.";
+// document.getElementById("one").innerHTML = text4.replaceAll("Hasitha","Newton");
+//output: Newton is learning.Newton is alive.
+
+let text4 = "Hasitha is learning.Hasitha is alive.";
+document.getElementById("one").innerHTML = text4.replace("Hasitha","Newton");
+//Newton is learning.Hasitha is alive.
+
