@@ -530,11 +530,11 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 //----------------------------------------------
 
 //JavaScript Arrays
-const vehicles = ["car","van", "bus","bicycle"];
+// const vehicles = ["car","van", "bus","bicycle"];
 //document.getElementById("one").innerHTML = vehicles[2];
 //output: bus
 
-vehicles[2] = "lorry";
+// vehicles[2] = "lorry";
 // document.getElementById("one").innerHTML = vehicles[2];
 //output: lorry
 
@@ -598,16 +598,32 @@ vehicles[2] = "lorry";
 // bicycle
 
 //Adding array element
-vehicles.push("helicopter");
+// vehicles.push("helicopter");
 // document.getElementById("one").innerHTML = vehicles;
 //output:car,van,lorry,bicycle,helicopter
 
-vehicles[3] = "rocket";
+// vehicles[3] = "rocket";
 // document.getElementById("one").innerHTML = vehicles;
 //car,van,lorry,rocket,helicopter(it has removed the existing element-bicycle of the array)
 
-vehicles[6] = "bike";
-document.getElementById("one").innerHTML = vehicles;
+// vehicles[6] = "bike";
+// document.getElementById("one").innerHTML = vehicles;
 //output:car,van,lorry,rocket,helicopter,,bike
 
-//Associative array
+//Associative array- should be continued
+
+//JavaScript Functions
+function myFunction(a,b){
+    return a+b;
+}
+//let result = myFunction(4,5);
+//document.getElementById("one").innerHTML = result;
+//output:9
+
+document.getElementById("one").innerHTML = "The output result is "+ myFunction(3,5);
+//output:The output result is 8
+
+//Variables declared within a JavaScript function, become LOCAL to the function.
+//Local variables can only be accessed from within the function.
+//Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+//Local variables are created when a function starts, and deleted when the function is completed.
