@@ -610,20 +610,58 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 // document.getElementById("one").innerHTML = vehicles;
 //output:car,van,lorry,rocket,helicopter,,bike
 
-//Associative array- should be continued
+//Associative array- should be continued--------------------------------------------
+
+
+//JavaScript Math Object
+//The JavaScript Math object allows you to perform mathematical tasks on numbers.
+// document.getElementById("one").innerHTML = Math.PI;
+//output: 3.141592653589793
+
+// Unlike other objects, the Math object has no constructor.
+// The Math object is static.
+// All methods and properties can be used without creating a Math object first.
+
+//Math Methods
+//Number to Integer
+let newNumber =234.56;
+// document.getElementById("one").innerHTML = Math.round(newNumber);
+//output:235 (Returns x rounded to its nearest integer)
+
+// document.getElementById("one").innerHTML = Math.floor(newNumber);
+//output:234 (Returns x rounded down to its nearest integer)
+
+// document.getElementById("one").innerHTML = Math.ceil(newNumber);
+//output:235 (Returns x rounded up to its nearest integer)
+
+//document.getElementById("one").innerHTML = Math.trunc(newNumber);
+//output:234 (Returns the integer part of x)
+
+//Math.sign()
+document.getElementById("one").innerHTML = Math.sign(newNumber);
+//output:1 (returns if x is negative, null or positive)
+
 
 //JavaScript Functions
-function myFunction(a,b){
-    return a+b;
-}
+// function myFunction(a,b){
+//     return a+b;
+// }
+
 //let result = myFunction(4,5);
 //document.getElementById("one").innerHTML = result;
 //output:9
 
-document.getElementById("one").innerHTML = "The output result is "+ myFunction(3,5);
+// document.getElementById("one").innerHTML = "The output result is "+ myFunction(3,5);
 //output:The output result is 8
 
 //Variables declared within a JavaScript function, become LOCAL to the function.
 //Local variables can only be accessed from within the function.
 //Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
 //Local variables are created when a function starts, and deleted when the function is completed.
+
+//defining a function using expression
+// const x = function (x,y){return x/y};
+// document.getElementById("one").innerHTML = x(5,8);
+//output: 0.625
+
+//The Function() Constructor
