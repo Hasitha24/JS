@@ -522,11 +522,92 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 //output: My Father's name is "Cyril"
 
 //Variable Substitutions
-let firstName = "Hasitha";
-let lastName = "Kapugamage";
-document.getElementById("one").innerHTML = `Her name is ${firstName}  ${lastName}`;
+// let firstName = "Hasitha";
+// let lastName = "Kapugamage";
+// document.getElementById("one").innerHTML = `Her name is ${firstName}  ${lastName}`;
 //output:Her name is Hasitha Kapugamage
 
 //----------------------------------------------
 
 //JavaScript Arrays
+const vehicles = ["car","van", "bus","bicycle"];
+//document.getElementById("one").innerHTML = vehicles[2];
+//output: bus
+
+vehicles[2] = "lorry";
+// document.getElementById("one").innerHTML = vehicles[2];
+//output: lorry
+
+//Converting an Array to a String
+// document.getElementById("one").innerHTML = vehicles.toString();
+//output:car,van,lorry,bicycle
+
+//Access the Full Array
+//document.getElementById("one").innerHTML = vehicles;
+//output:car,van,lorry,bicycle
+
+//Array Elements Can Be Objects.They can either be objects, functions or another array
+
+//length property
+//document.getElementById("one").innerHTML = vehicles.length;
+//output:4
+
+//accessing first array element
+//document.getElementById("one").innerHTML = vehicles[0];
+//output: car
+
+//accessing last element of the array
+//document.getElementById("one").innerHTML = vehicles[vehicles.length-1];
+//output: bicycle
+
+//Looping Array Elements
+
+// for (i=0; i< vehicles.length ; i++)
+// {
+//     arrayElement = vehicles[i];
+// }
+// document.getElementById("one").innerHTML = arrayElement;
+//gives an error as variable arrayElement is defined inside the for loop.When the loop finishes,
+//the variable arrayElement is no longer accessible.Therefore gives an error
+
+//Correct method
+// let arrayElement = "";
+// for (i=0; i< vehicles.length ; i++)
+//     {
+//         arrayElement += vehicles[i] + "<br>";
+//     }
+//     document.getElementById("one").innerHTML = arrayElement;
+//output
+// car
+// van
+// lorry
+// bicycle
+
+// let arrayElement = "";
+// vehicles.forEach(myFunction);
+// arrayElement += " ";
+
+// function myFunction(value){
+//     arrayElement += value + "<br>" ;
+// }
+// document.getElementById("one").innerHTML = arrayElement ;
+//output
+// car
+// van
+// lorry
+// bicycle
+
+//Adding array element
+vehicles.push("helicopter");
+// document.getElementById("one").innerHTML = vehicles;
+//output:car,van,lorry,bicycle,helicopter
+
+vehicles[3] = "rocket";
+// document.getElementById("one").innerHTML = vehicles;
+//car,van,lorry,rocket,helicopter(it has removed the existing element-bicycle of the array)
+
+vehicles[6] = "bike";
+document.getElementById("one").innerHTML = vehicles;
+//output:car,van,lorry,rocket,helicopter,,bike
+
+//Associative array
