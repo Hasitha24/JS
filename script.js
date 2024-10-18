@@ -368,7 +368,7 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 //output: 5000
 
 //String Repeat
-let text3 = "Hasitha is learning";
+//let text3 = "Hasitha is learning";
 // document.getElementById("one").innerHTML = text3.repeat(3);
 //output:HasithaHasithaHasitha (Create copies of a text)
 
@@ -435,7 +435,7 @@ let text3 = "Hasitha is learning";
 // document.getElementById("one").innerHTML = textString.indexOf("where",3);
 //output:5
 
-let textString ="Find where the name is where";
+//let textString ="Find where the name is where";
 // document.getElementById("one").innerHTML = textString.indexOf("where",8);
 //output: 23 (Both methods accept a second parameter as the starting position for the search)
 //The lastIndexOf() methods searches backwards (from the end to the beginning), 
@@ -466,7 +466,7 @@ let textString ="Find where the name is where";
 // document.getElementById("one").innerHTML = myArr.length;
 //output: 2
 
-let text4 = "Where means where you live";
+//let text4 = "Where means where you live";
 // const myArr = text4.match(/ere/gi);
 // document.getElementById("one").innerHTML = myArr.length;
 //output:2
@@ -512,5 +512,21 @@ let text4 = "Where means where you live";
 // document.getElementById("one").innerHTML = text4.endsWith ("you");
 //output: false
 
-document.getElementById("one").innerHTML = text4.endsWith ("you",21);
+//document.getElementById("one").innerHTML = text4.endsWith ("you",21);
 //output: true
+
+//Template Strings
+//Template strings allow both single quotes and double quotes to be insterted
+// let name = `My Father's name is "Cyril"`;
+// document.getElementById("one").innerHTML = name;
+//output: My Father's name is "Cyril"
+
+//Variable Substitutions
+let firstName = "Hasitha";
+let lastName = "Kapugamage";
+document.getElementById("one").innerHTML = `Her name is ${firstName}  ${lastName}`;
+//output:Her name is Hasitha Kapugamage
+
+//----------------------------------------------
+
+//JavaScript Arrays
