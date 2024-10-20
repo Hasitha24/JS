@@ -638,8 +638,30 @@ let newNumber =234.56;
 //output:234 (Returns the integer part of x)
 
 //Math.sign()
-document.getElementById("one").innerHTML = Math.sign(newNumber);
+//document.getElementById("one").innerHTML = Math.sign(newNumber);
 //output:1 (returns if x is negative, null or positive)
+
+//Math.pow()
+// let newNumber2 = 6;
+// let newNumber3 = 4;
+//document.getElementById("one").innerHTML = Math.pow(newNumber2,newNumber3);
+//output: 1296 (Math.pow(x, y) returns the value of x to the power of y)
+
+//Math.sqrt()
+//document.getElementById("one").innerHTML = Math.sqrt(newNumber2,newNumber3);
+//output:2.449489742783178
+
+//Math.abs()
+//document.getElementById("one").innerHTML = Math.abs(newNumber2,newNumber3);
+//output: 6
+
+//Math.min() 
+//document.getElementById("one").innerHTML = Math.min(5,9,123,-56,-3);
+//output: -56
+
+//Math.max()
+document.getElementById("one").innerHTML = Math.max(5,9,123,-56,-3);
+//output: 123
 
 
 //JavaScript Functions
