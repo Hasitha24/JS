@@ -611,6 +611,59 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 //output:car,van,lorry,rocket,helicopter,,bike
 
 //Associative array- should be continued--------------------------------------------
+//JavaScript does not support arrays with named indexes.Instead in JavaScript, arrays always use numbered indexes.  
+
+// const Person= [];
+// Person[0] = "Hasitha";
+// Person[1] = "Gesha";
+// Person[2] = "Obama";
+
+// document.getElementById("one").innerHTML = Person.length;
+//output:3
+
+//Nested Arrays and Objects
+// const myObj = {
+//     name: "Hasitha";
+//     age: 30;
+//     cars :[
+//         {name:"Ford", models: ["one","two","three"]},
+//         {name: "BMW",models:["four","five","six"]},
+//         {name: "Toyota", models:["seven","eight","nine"]}
+//     ]
+// }
+
+//JavaScript Array join()
+const flowers = ["rose","jasmine","shoe flower","petunia"];
+//document.getElementById("one").innerHTML =flowers.join("-");
+//output:rose-jasmine-shoe flower-petunia
+
+//JavaScript Array pop()
+//document.getElementById("one").innerHTML =flowers.pop();
+//output: petunia
+
+//JavaScript Array push()
+// flowers.push("Anthurium");
+//document.getElementById("one").innerHTML =flowers[4];
+//output:Anthurium
+
+
+//JavaScript Array shift().The shift() method removes the first array element and "shifts" all other elements to a lower index.
+// flowers.shift();
+// document.getElementById("one").innerHTML =flowers[0];
+//output:jasmine
+
+//JavaScript Array unshift().The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements
+// flowers.unshift("no flower");
+// document.getElementById("one").innerHTML =flowers[0];
+//output:no flower
+
+//JavaScript Array delete()
+// Using delete() leaves undefined holes in the array.
+// Use pop() or shift() instead.
+delete flowers[0];
+document.getElementById("one").innerHTML =flowers[1];
+//output:jasmine
+
 
 
 //JavaScript Math Object
@@ -707,12 +760,24 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 // document.getElementById("one").innerHTML = sum(4,6);
 //output: 10
 
-
+//Age Calculator
 // const age =(birthYear) => 2024-birthYear;
 // document.getElementById("one").innerHTML = age(1994);
 //output:30
 
 //JS Discount Calculator
-const disPrice =(oriPrice,disPercent) =>(oriPrice-(oriPrice*(disPercent/100)));
-document.getElementById("one").innerHTML = disPrice(4530,10);
+// const disPrice =(oriPrice,disPercent) =>(oriPrice-(oriPrice*(disPercent/100)));
+// document.getElementById("one").innerHTML = disPrice(4530,10);
 //output:4077
+
+//--------------------Should complete this
+// //JS Classes
+// class Car {
+//     constructor (name,year){
+//         this.name = name;
+//         this.year = year;
+//     }
+// }
+
+// const car1 = new Car("Audi","2018");
+
