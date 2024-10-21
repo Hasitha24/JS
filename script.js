@@ -624,7 +624,7 @@ Here, the AutonomousMode property is shared across all car objects, so all 3 mod
 
 //Math Methods
 //Number to Integer
-let newNumber =234.56;
+//let newNumber =234.56;
 // document.getElementById("one").innerHTML = Math.round(newNumber);
 //output:235 (Returns x rounded to its nearest integer)
 
@@ -660,7 +660,7 @@ let newNumber =234.56;
 //output: -56
 
 //Math.max()
-document.getElementById("one").innerHTML = Math.max(5,9,123,-56,-3);
+//document.getElementById("one").innerHTML = Math.max(5,9,123,-56,-3);
 //output: 123
 
 
@@ -687,3 +687,32 @@ document.getElementById("one").innerHTML = Math.max(5,9,123,-56,-3);
 //output: 0.625
 
 //The Function() Constructor
+// const myFunction = new Function("t", "h","return t+h");
+// let newAmount = myFunction(5,10);
+// document.getElementById("one").innerHTML = newAmount;
+//output:15
+
+// const calcAge = new Function("year","return 2024-year");
+// let age = calcAge(1986);
+// document.getElementById("one").innerHTML = age;
+//output:38
+
+// A function defined as the property of an object, is called a method to the object.
+// A function designed to create new objects, is called an object constructor.
+
+//Arrow Functions
+// const x = (x, y) => x * y;
+
+// const sum = (a,b) => a+b;
+// document.getElementById("one").innerHTML = sum(4,6);
+//output: 10
+
+
+// const age =(birthYear) => 2024-birthYear;
+// document.getElementById("one").innerHTML = age(1994);
+//output:30
+
+//JS Discount Calculator
+const disPrice =(oriPrice,disPercent) =>(oriPrice-(oriPrice*(disPercent/100)));
+document.getElementById("one").innerHTML = disPrice(4530,10);
+//output:4077
