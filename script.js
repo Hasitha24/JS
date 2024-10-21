@@ -660,9 +660,30 @@ const flowers = ["rose","jasmine","shoe flower","petunia"];
 //JavaScript Array delete()
 // Using delete() leaves undefined holes in the array.
 // Use pop() or shift() instead.
-delete flowers[0];
-document.getElementById("one").innerHTML =flowers[1];
+// delete flowers[0];
+// document.getElementById("one").innerHTML =flowers[1];
 //output:jasmine
+
+
+//JS Array Search()
+//JavaScript Array indexOf()
+//The indexOf() method searches an array for an element value and returns its position.
+const animals = ["cat","dog","giraffe","zebra","bull","dog"];
+// document.getElementById("one").innerHTML = animals.indexOf("dog");
+//output:1
+
+//JavaScript Array lastIndexOf() -returns the position of the last occurrence of the specified element.
+// document.getElementById("one").innerHTML = animals.lastIndexOf("dog");
+//output:5
+
+//JavaScript Array includes() -This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+// document.getElementById("one").innerHTML = animals.includes("dog");
+//output:true
+//document.getElementById("one").innerHTML = animals.includes("snake");
+//output:false
+
+//JavaScript Array find()
+document.getElementById("one").innerHTML = animals.find("snake");
 
 
 
